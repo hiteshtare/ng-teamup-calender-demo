@@ -1,4 +1,7 @@
 <h1>Hello NG Teamup Calender Demo!</h1>
+<button (click)="getMyCalenderEvents()">Get My Events</button>
 <ul *ngFor="let item of listOfEvents">
-  <li>{{ item.startTime }} - {{ item.endTime }} &nbsp; {{ item.title }}</li>
+  <li>
+    {{ item.startTime }} - {{ item.endTime }} &nbsp;|&nbsp; {{ item.title }}
+  </li>
 </ul>

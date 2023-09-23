@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.getMyCalenderEvents();
+    // this.getMyCalenderEvents();
   }
 
   public async getMyCalenderEvents() {
@@ -27,6 +27,8 @@ export class AppComponent {
     const headers = new HttpHeaders({
       'Teamup-Token': teamupToken,
     });
+
+    this.listOfEvents = [];
 
     await this.http
       .get(url, { headers })
