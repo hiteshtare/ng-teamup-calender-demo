@@ -1,6 +1,9 @@
 <h1>PY - NG Teamup Calender API Demo!</h1>
 <button (click)="getMyCalenderEvents()">Get My Events</button>
 <hr />
-<ul *ngFor="let item of listOfEvents">
-  <li>{{ item.startTime }} - {{ item.endTime }} | {{ item.title }}</li>
-</ul>
+<div *ngFor="let group of groupArrays">
+  <h4>{{ group.date }}</h4>
+  <ul *ngFor="let item of group.events">
+    <li>{{ item.startTime }} - {{ item.endTime }} | {{ item.title }}</li>
+  </ul>
+</div>
